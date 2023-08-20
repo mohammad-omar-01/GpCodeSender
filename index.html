@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRBL Control</title>
+    <!-- Add this inside the <head> section of your HTML -->
+<script>
+    // Request access to the Web Serial API
+    async function requestSerialPort() {
+        const port = await navigator.serial.requestPort();
+        return port;
+    }
+</script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>GRBL Control Panel</h1>
+    <div class="button-container">
+        <button id="homing-btn">Homing</button>
+        <button id="unlock-btn">Unlock</button>
+        <button id="reset-btn">Reset</button>
+
+        <button id="x-pos-btn">X+</button>
+        <button id="x-neg-btn">X-</button>
+        <button id="y-pos-btn">Y+</button>
+        <button id="y-neg-btn">Y-</button>
+        <button id="z-pos-btn">Z+</button>
+        <button id="z-neg-btn">Z-</button>
+        <button id="UploadGcodeFile-btn">Upload</button>
+        <button id="OpenSerialPort-btn">Open</button>
+
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
